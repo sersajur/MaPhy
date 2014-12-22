@@ -1,0 +1,157 @@
+\documentclass[12pt]{book}
+\usepackage[T2A]{fontenc}
+\usepackage[cp1251]{inputenc}
+\usepackage[ukrainian]{babel}
+\usepackage[matrix, arrow, curve]{xy}
+\usepackage{textcomp}
+\usepackage{amsfonts, amssymb, amsmath, fancyhdr}
+
+\newcommand{\version}{version 0.1,\ \  12.12.2012}
+\newcommand{\mycourse}{{\small Рівняння математичної фізики}}
+\newcommand{\myauthor}{{\small Сірик С.В.}}
+
+\addtolength{\topmargin}{-15mm}
+\addtolength{\textheight}{35mm}
+\addtolength{\oddsidemargin}{-15mm}
+\addtolength{\evensidemargin}{-35mm}
+\addtolength{\textwidth}{45mm}
+\setlength{\headheight}{15pt}
+
+\pagestyle{fancy} 
+\rhead{\myauthor}
+\lhead{\mycourse}
+\lfoot{\tiny \sc Лекції} 
+\cfoot{-- \thepage \ -- }
+\rfoot{\tiny \sc\version}
+
+\renewcommand{\theequation}{\arabic{equation}}
+  \renewcommand{\chapter}{%
+     \secdef\ChapterNumbered\ChapterStarred}
+
+  \def\ChapterNumbered[#1]#2{%
+      \addcontentsline{toc}{chapter}{\thechapter. #1}
+      \refstepcounter{chapter}
+      {
+\vspace{\baselineskip}
+\chaptermark{#2}
+          { {{\noindent\bf\huge #2\par}}}
+      }
+    \vspace{\baselineskip}
+}
+
+  \newcommand{\ChapterStarred}[1]{%
+      \refstepcounter{chapter}
+      \chaptermark{#1}%
+      \vspace{\baselineskip}}
+
+  \renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+
+%а вот здесь, собственно, и начинается поле для творчества и ваяния текста :)
+\begin{document}
+
+\chapter{Практика: Класифікація рівнянь в частинних похідних}
+\par\medskip
+{\Large\textbf{1. Теоретичні відомості}} \medskip
+
+Маємо рівняння
+\begin{equation}
+	a_{11}u_{xx} + 2a_{12}u_{xy} + a_{22}u_{yy} + F(x,y,u,u_{x},u_{y}) = 0,
+	\label{eq:classpatern}
+\end{equation} 
+для нього визначаємо дискримінант:
+\begin{equation*}
+	D \equiv a_{12}^{2} - a_{11}a_{22},
+\end{equation*}
+при чому дискримінант визначаємо поточково ( $ D = D(x,y) $).
+Тоді тип рівняння \eqref{eq:classpatern} визначається в залежності від знаку $ D $:
+\begin{itemize}
+	\item[] $D > 0$ --- гіперболічного типу в точці $(x,y)$;
+	\item[] $D = 0$ --- параболічного типу в точці $(x,y)$;
+	\item[] $D < 0$ --- еліптичного типу в точці $(x,y)$.  
+\end{itemize}
+
+Характеристичні рівняння для \eqref{eq:classpatern}:
+\begin{equation}
+	\frac{dy}{dx} = \frac{a_{12} \pm \sqrt{D}}{a_{11}}.
+	\label{eq:charact}
+\end{equation}
+
+Тоді
+\begin{enumerate}
+	\item[a)] $D > 0$, 
+		$\phi(x,y)=C$ та $\psi(x,y)=C$ --- загальні інтеграли характеристичних рівнянь \eqref{eq:charact}.
+		Якщо виконати заміну змінних
+		\begin{eqnarray*}
+			\xi &=& \phi(x,y),\\
+			\eta &=& \psi(x,y), 
+		\end{eqnarray*}
+		то зведемо рівняння \eqref{eq:classpatern} до прешої канонічної гіперболічної форми:
+		\begin{equation*}
+			u_{\xi\eta} = \Phi(\xi,\eta,u,u_{\xi},u_{\eta}).	 
+		\end{equation*}
+		Якщо виконати заміну змінних
+		\begin{eqnarray*}
+			\alpha &=& \frac{\xi + \eta}{2},\\
+			\beta &=& \frac{\xi - \eta}{2}, 
+		\end{eqnarray*}
+		то матимуть місце рівності:
+		\begin{eqnarray*}
+			u_{\xi} &=& \frac{1}{2}({u_{\alpha} + u_{\beta}}),\\
+			u_{\eta} &=& \frac{1}{2}({u_{\alpha} - u_{\beta}}),\\
+			u_{\xi\eta} &=& \frac{1}{4}({u_{\alpha\alpha} - u_{\beta\beta}}),
+		\end{eqnarray*} 
+		і тоді зведемо рівняння \eqref{eq:classpatern} до другої канонічної гіперболічної форми:
+		\begin{equation*}
+			u_{\alpha\alpha} - u_{\beta\beta} = \Phi_{1}(\alpha,\beta,u,u_{\alpha},u_{\beta}).	 
+		\end{equation*}
+	\item[б)] $D = 0$,
+		$\phi(x,y)=C$ --- єдиний загальний інтеграл характеристичного рівняння \eqref{eq:charact}.
+		Виконуючи заміну змінних
+		\begin{eqnarray*}
+			\xi &=& \phi(x,y),\\
+			\eta &=& \psi(x,y), 
+		\end{eqnarray*}
+		де $ \psi $ --- довільна лінійно незалежна від $ \phi $ функція, зведемо рівняння \eqref{eq:classpatern} до канонічної параболічної форми:
+		\begin{eqnarray*}
+			u_{\eta\eta} &=& \Phi(\xi,\eta,u,u_{\xi},u_{\eta})\\
+			\text{чи}&&\\
+			u_{\xi\xi} &=& \Phi(\xi,\eta,u,u_{\xi},u_{\eta}) \text{(якщо взяти $\xi$ і $\eta$ навпаки)}. 
+		\end{eqnarray*}
+	\item[в)] $D < 0$, 
+		$\phi(x,y)=C$ та $\phi^{*}(x,y)=C$ --- комплексно спряжені загальні інтеграли характеристичних рівнянь \eqref{eq:charact}.
+		Виконавши заміну змінних
+		\begin{eqnarray*}
+			\xi &=& \Re\phi,\\
+			\eta &=& \Im\phi, 
+		\end{eqnarray*}
+		зведемо рівняння \eqref{eq:classpatern} до канонічної еліптичної форми:
+		\begin{equation*}
+			u_{\xi\xi} + u_{\eta\eta} = \Phi(\xi,\eta,u,u_{\xi},u_{\eta}).	 
+		\end{equation*}
+\end{enumerate}
+
+\par\medskip
+{\Large\textbf{2. Приклади}} \medskip
+
+{\large\textbf{Приклад 1}}
+
+\begin{equation*}
+	x^{2}u_{xx} - y^{2}u_{yy} = 0.
+\end{equation*}
+
+Для нього:
+\begin{eqnarray*}
+	a_{11} = x^{2}, a_{12} = 0, a_{22} = -y^{2},& D = a_{12}^{2} - a_{11}a_{22} = x^{2}y^{2},& D > 0, \text{якщо $x\neq0, y\neq0$}.
+\end{eqnarray*}
+
+Ріняння характеристик:
+\begin{equation*}
+	\frac{dy}{dx} = \frac{a_{12} \pm \sqrt{D}}{a_{11}} = \pm \frac{\sqrt{x^{2}y^{2}}}{x^{2}} = \pm \frac{\left|x\right|\cdot\left|y\right|}{x^{2}} = \pm \frac{\left|y\right|}{\left|x\right|}
+\end{equation*}
+
+Область гіперболічності --- це об'єднання чотирьох квадрантів (без характеристичних осей), тому в кожному квадранті можна (і навіть слід) приводити рівняння окремо, розкриваючи відповідно модулі у рівнянні характеристик. Але там всюди стоїть знак "`$\pm$"', тому з точністю до перестановки змінних  нема різниці, якщо ці модулі взагалі прибрати.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+
+
