@@ -85,7 +85,7 @@
 			\xi &=& \phi(x,y),\\
 			\eta &=& \psi(x,y), 
 		\end{eqnarray*}
-		то зведемо рівняння \eqref{eq:classpatern} до прешої канонічної гіперболічної форми:
+		то зведемо рівняння \eqref{eq:classpatern} до першої канонічної гіперболічної форми:
 		\begin{equation*}
 			u_{\xi\eta} = \Phi(\xi,\eta,u,u_{\xi},u_{\eta}).	 
 		\end{equation*}
@@ -144,14 +144,61 @@
 	a_{11} = x^{2}, a_{12} = 0, a_{22} = -y^{2},& D = a_{12}^{2} - a_{11}a_{22} = x^{2}y^{2},& D > 0, \text{якщо $x\neq0, y\neq0$}.
 \end{eqnarray*}
 
-Ріняння характеристик:
+Рівняння характеристик:
 \begin{equation*}
-	\frac{dy}{dx} = \frac{a_{12} \pm \sqrt{D}}{a_{11}} = \pm \frac{\sqrt{x^{2}y^{2}}}{x^{2}} = \pm \frac{\left|x\right|\cdot\left|y\right|}{x^{2}} = \pm \frac{\left|y\right|}{\left|x\right|}
+	\frac{dy}{dx} = \frac{a_{12} \pm \sqrt{D}}{a_{11}} = \pm \frac{\sqrt{x^{2}y^{2}}}{x^{2}} = \pm \frac{\left|x\right|\cdot\left|y\right|}{x^{2}} = \pm \frac{\left|y\right|}{\left|x\right|}.
 \end{equation*}
 
-Область гіперболічності --- це об'єднання чотирьох квадрантів (без характеристичних осей), тому в кожному квадранті можна (і навіть слід) приводити рівняння окремо, розкриваючи відповідно модулі у рівнянні характеристик. Але там всюди стоїть знак "`$\pm$"', тому з точністю до перестановки змінних  нема різниці, якщо ці модулі взагалі прибрати.
+Область гіперболічності --- це об'єднання чотирьох квадрантів (без характеристичних осей), тому в кожному квадранті можна (і навіть слід) приводити рівняння окремо, розкриваючи відповідно модулі у рівнянні характеристик. Але там всюди стоїть знак "`$\pm$"', тому з точністю до перестановки змінних нема різниці, якщо ці модулі взагалі зняти.
+Тому можемо виконати перетворення:
+\begin{equation*}
+	\frac{dy}{dx} = \pm \frac{y}{x} \Leftrightarrow \frac{dy}{y} = \pm \frac{dx}{x} \Leftrightarrow \ln{\left|y\right|} = \pm \ln{\left|x\right|} + C,\quad C \in \mathbb{R}.
+\end{equation*}
 
+Тоді
+\begin{equation*}
+	\text{або} \quad \ln{\left|xy\right|} = C, \quad \text{або} \quad \ln{\left|\frac{y}{x}\right|} = C,
+\end{equation*}
+звідки маємо загальні інтеграли
+\begin{equation*}
+	xy=C \quad \text{та} \quad \frac{y}{x}=C.
+\begin{equation*}
+
+Поклавши $\xi=xy,\; \eta = \frac{y}{x}$, маємо:
+\begin{align*}
+	u_{x}&=  u_{\xi}\xi_{x}+u_{\eta}\eta_{x} = u_{\xi}y + u_{\eta}(-\frac{y}{x^{2}}),\\
+	u_{xx}& = (u_{\xi})_{x}y + u_{\xi}y_{x} + (u_{\eta})_{x}(-\frac{y}{x^{2}}) + u_{\eta}\frac{2y}{x^{3}} =  y(u_{\xi\xi}\xi_{x} + u_{\xi\eta}\eta_{x}) + 0 - \frac{y}{x^{2}}(u_{\eta\xi}\xi_{x} + u_{\eta\eta}\eta_{x}) + u_{\eta}\frac{2y}{x^{3}} = \\
+	&=  y(u_{\xi\xi}y-u_{\xi\eta}\frac{y}{x^{2}}) - \frac{y}{x^2}(u_{\eta\xi}y - u_{\eta\eta}\frac{y}{x^{2}}) + u_{\eta}\frac{2y}{x^{3}}=u_{\xi\xi}y^{2} + \frac{y^{2}}{x^{4}}u_{\eta\eta}-\frac{2y^{2}}{x^{2}}u_{\xi\eta} + u_{\eta}\frac{2y}{x^{3}},\\
+	u_{y}&= u_{\xi}\xi_{y} + u_{\eta}\eta_{y} = u_{\xi}x + u_{\eta}\frac{1}{x},\\
+	u_{yy}&= x(u_{\xi\xi}\xi_{y}+u_{\xi\eta}\eta_{y}) + \frac{1}{x}(u_{\eta\xi}\xi_{y} + u_{\eta\eta}\eta_{y}) = x(u_{\xi\xi}x + u_{\xi\eta}\frac{1}{x}) + \frac{1}{x}(u_{\eta\xi}x + u_{\eta\eta}\frac{1}{x}) = x^{2}u_{\xi\xi}+2u_{\xi\eta} + \frac{1}{x^{2}}u_{\eta\eta}.
+\end{align*} 
+
+Тоді, виконавши підстановку у початкове рівняння, приводимо до канонічної форми:
+\begin{align*}
+\begin{aligned}[c]
+	&x^{2}u_{xx}-y^{2}u_{yy} = 0 \; \Leftrightarrow \; x^{2}y^{2}u_{\xi\xi} + \frac{y^{2}}{x^{2}}u_{\eta\eta}-2y^{2}u_{\xi\eta}+\frac{2y}{x}u_{\eta}-x^{2}y^{2}u_{\xi\xi}-2y^{2}u_{\xi\eta}-\frac{y^{2}}{x^{2}}u_{\eta\eta}=0 \; \Leftrightarrow \\
+	&\Leftrightarrow \; -4y^{2}u_{\xi\eta}+\frac{2y}{x}u_{\eta}=0 \; \Leftrightarrow \; u_{\xi\eta} - \frac{1}{2xy}u_{\eta} = 0 \; \Leftrightarrow \; u_{\xi\eta} - \frac{1}{2\xi}u_{\eta}=0.
+\end{aligned}
+\end{align*}
+
+Можна і іншим способом. Наприклад, поклавши $\alpha = \frac{1}{2}(\xi + \eta) = \frac{1}{2}(xy+\frac{y}{x}),\; \beta = \frac{1}{2}(\xi - \eta) = \frac{1}{2}(xy+\frac{y}{x})$. Але можна загальні інтеграли брати і в їх початковому вигляді $ \ln{\left|y\right|} \pm \ln{\left|x\right|}  = C$. Тоді, поклавши $\xi = \ln{\left|x\right|}, \; \eta = \ln{\left|y\right|}$, маємо:
+\begin{align*}
+u_{x} &= u_{\xi}\xi_{x} + u_{\eta}\eta_{x} = u_{\xi}\frac{1}{x} + 0, \\
+u_{xx} &= -\frac{1}{x^{2}}u_{\xi}+\frac{1}{x}(u_{\xi\xi}\xi_{x}+u_{\xi\eta}\eta_{x}) = - \frac{1}{x^{2}}u_{\xi} + \frac{1}{x^{2}}u_{\xi\xi},\\
+u_{y} &= u_{\eta}\frac{1}{y},\\
+u_{yy} &= -\frac{1}{y^{2}}u_{\eta} + \frac{1}{y}(u_{\eta\xi}\xi_{y} + u_{\eta\eta}\eta_{y}) = -\frac{1}{y^{2}}u_{\eta} + \frac{1}{y^{2}}u_{\eta\eta}.
+\end{align*}
+
+Тоді, виконавши підстановку у початкове рівняння, приводимо до канонічної форми:
+\begin{equation*}
+	x^{2}u_{xx} - y^{2}u_{yy} = 0 \; \Leftrightarrow \; -u_{\xi} + u_{\xi\xi} + u_{\eta} - u_{\eta\eta} = 0 \; \Leftrightarrow \; u_{\xi\xi} - u_{\eta\eta} + u_{\eta} - u_{\xi} = 0. 
+\end{equation*} 
+
+\begin{tabular}{l l l}
+\textit{Відповідь:} & гіперболічне при $x^{2}y^{2} > 0$: 	&$u_{\xi\eta}-\frac{1}{2\xi}u_{\eta}=0$ 	(при $\xi = xy, \eta = \frac{y}{x}$) або \\
+										& 												&$u_{\xi\xi} - u_{\eta\eta} + u_{\eta} -u_{\xi} = 0$ 		(при $\xi = \ln{\left|x\right|}, \eta = \ln{\left|y\right|}$); \\
+										&	параболічне при $x=0$ або $y=0$: 		&$u_{yy}=0$ або $u_{xx}=0$ відповідно;\\
+										&при $x=y=0$: &$0=0$ --- нічого класифікувати.\\
+	\end{itemize}\\	\end{taular}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
-
-
