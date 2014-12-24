@@ -133,6 +133,7 @@
 \par\medskip
 {\Large\textbf{2. Приклади}} \medskip
 
+%#1
 {\large\textbf{Приклад 1}}
 
 \begin{equation*}
@@ -166,27 +167,29 @@
 
 Поклавши $\xi=xy,\; \eta = \frac{y}{x}$, маємо:
 \begin{align*}
-	u_{x}&=  u_{\xi}\xi_{x}+u_{\eta}\eta_{x} = u_{\xi}y + u_{\eta}(-\frac{y}{x^{2}}),\\
-	u_{xx}& = (u_{\xi})_{x}y + u_{\xi}y_{x} + (u_{\eta})_{x}(-\frac{y}{x^{2}}) + u_{\eta}\frac{2y}{x^{3}} =  y(u_{\xi\xi}\xi_{x} + u_{\xi\eta}\eta_{x}) + 0 - \frac{y}{x^{2}}(u_{\eta\xi}\xi_{x} + u_{\eta\eta}\eta_{x}) + u_{\eta}\frac{2y}{x^{3}} = \\
-	&=  y(u_{\xi\xi}y-u_{\xi\eta}\frac{y}{x^{2}}) - \frac{y}{x^2}(u_{\eta\xi}y - u_{\eta\eta}\frac{y}{x^{2}}) + u_{\eta}\frac{2y}{x^{3}}=u_{\xi\xi}y^{2} + \frac{y^{2}}{x^{4}}u_{\eta\eta}-\frac{2y^{2}}{x^{2}}u_{\xi\eta} + u_{\eta}\frac{2y}{x^{3}},\\
-	u_{y}&= u_{\xi}\xi_{y} + u_{\eta}\eta_{y} = u_{\xi}x + u_{\eta}\frac{1}{x},\\
-	u_{yy}&= x(u_{\xi\xi}\xi_{y}+u_{\xi\eta}\eta_{y}) + \frac{1}{x}(u_{\eta\xi}\xi_{y} + u_{\eta\eta}\eta_{y}) = x(u_{\xi\xi}x + u_{\xi\eta}\frac{1}{x}) + \frac{1}{x}(u_{\eta\xi}x + u_{\eta\eta}\frac{1}{x}) = x^{2}u_{\xi\xi}+2u_{\xi\eta} + \frac{1}{x^{2}}u_{\eta\eta}.
+	&u_{x} =  u_{\xi}\xi_{x}+u_{\eta}\eta_{x} = u_{\xi}y + u_{\eta}(-\frac{y}{x^{2}}),\\ 
+	&\begin{aligned}[t]
+		u_{xx}=&(u_{\xi})_{x}y + u_{\xi}y_{x} + (u_{\eta})_{x}(-\frac{y}{x^{2}}) + u_{\eta}\frac{2y}{x^{3}} =  y(u_{\xi\xi}\xi_{x} + u_{\xi\eta}\eta_{x}) + 0 - \frac{y}{x^{2}}(u_{\eta\xi}\xi_{x} + u_{\eta\eta}\eta_{x}) + u_{\eta}\frac{2y}{x^{3}} = \\
+	= &y(u_{\xi\xi}y-u_{\xi\eta}\frac{y}{x^{2}}) - \frac{y}{x^2}(u_{\eta\xi}y - u_{\eta\eta}\frac{y}{x^{2}}) + u_{\eta}\frac{2y}{x^{3}}=u_{\xi\xi}y^{2} + \frac{y^{2}}{x^{4}}u_{\eta\eta}-\frac{2y^{2}}{x^{2}}u_{\xi\eta} + u_{\eta}\frac{2y}{x^{3}},
+	\end{aligned} \\
+	&u_{y}= u_{\xi}\xi_{y} + u_{\eta}\eta_{y} = u_{\xi}x + u_{\eta}\frac{1}{x},\\
+	&u_{yy}= x(u_{\xi\xi}\xi_{y}+u_{\xi\eta}\eta_{y}) + \frac{1}{x}(u_{\eta\xi}\xi_{y} + u_{\eta\eta}\eta_{y}) = x(u_{\xi\xi}x + u_{\xi\eta}\frac{1}{x}) + \frac{1}{x}(u_{\eta\xi}x + u_{\eta\eta}\frac{1}{x}) = x^{2}u_{\xi\xi}+2u_{\xi\eta} + \frac{1}{x^{2}}u_{\eta\eta}.
 \end{align*} 
 
 Тоді, виконавши підстановку у початкове рівняння, приводимо до канонічної форми:
 \begin{align*}
 \begin{aligned}[c]
 	&x^{2}u_{xx}-y^{2}u_{yy} = 0 \; \Leftrightarrow \; x^{2}y^{2}u_{\xi\xi} + \frac{y^{2}}{x^{2}}u_{\eta\eta}-2y^{2}u_{\xi\eta}+\frac{2y}{x}u_{\eta}-x^{2}y^{2}u_{\xi\xi}-2y^{2}u_{\xi\eta}-\frac{y^{2}}{x^{2}}u_{\eta\eta}=0 \; \Leftrightarrow \\
-	&\Leftrightarrow \; -4y^{2}u_{\xi\eta}+\frac{2y}{x}u_{\eta}=0 \; \Leftrightarrow \; u_{\xi\eta} - \frac{1}{2xy}u_{\eta} = 0 \; \Leftrightarrow \; u_{\xi\eta} - \frac{1}{2\xi}u_{\eta}=0.
+	\Leftrightarrow \; &-4y^{2}u_{\xi\eta}+\frac{2y}{x}u_{\eta}=0 \; \Leftrightarrow \; u_{\xi\eta} - \frac{1}{2xy}u_{\eta} = 0 \; \Leftrightarrow \; u_{\xi\eta} - \frac{1}{2\xi}u_{\eta}=0.
 \end{aligned}
 \end{align*}
 
 Можна і іншим способом. Наприклад, поклавши $\alpha = \frac{1}{2}(\xi + \eta) = \frac{1}{2}(xy+\frac{y}{x}),\; \beta = \frac{1}{2}(\xi - \eta) = \frac{1}{2}(xy+\frac{y}{x})$. Але можна загальні інтеграли брати і в їх початковому вигляді $ \ln{\left|y\right|} \pm \ln{\left|x\right|}  = C$. Тоді, поклавши $\xi = \ln{\left|x\right|}, \; \eta = \ln{\left|y\right|}$, маємо:
 \begin{align*}
-u_{x} &= u_{\xi}\xi_{x} + u_{\eta}\eta_{x} = u_{\xi}\frac{1}{x} + 0, \\
-u_{xx} &= -\frac{1}{x^{2}}u_{\xi}+\frac{1}{x}(u_{\xi\xi}\xi_{x}+u_{\xi\eta}\eta_{x}) = - \frac{1}{x^{2}}u_{\xi} + \frac{1}{x^{2}}u_{\xi\xi},\\
-u_{y} &= u_{\eta}\frac{1}{y},\\
-u_{yy} &= -\frac{1}{y^{2}}u_{\eta} + \frac{1}{y}(u_{\eta\xi}\xi_{y} + u_{\eta\eta}\eta_{y}) = -\frac{1}{y^{2}}u_{\eta} + \frac{1}{y^{2}}u_{\eta\eta}.
+&u_{x} = u_{\xi}\xi_{x} + u_{\eta}\eta_{x} = u_{\xi}\frac{1}{x} + 0, \\
+&u_{xx} = -\frac{1}{x^{2}}u_{\xi}+\frac{1}{x}(u_{\xi\xi}\xi_{x}+u_{\xi\eta}\eta_{x}) = - \frac{1}{x^{2}}u_{\xi} + \frac{1}{x^{2}}u_{\xi\xi},\\
+&u_{y} = u_{\eta}\frac{1}{y},\\
+&u_{yy} = -\frac{1}{y^{2}}u_{\eta} + \frac{1}{y}(u_{\eta\xi}\xi_{y} + u_{\eta\eta}\eta_{y}) = -\frac{1}{y^{2}}u_{\eta} + \frac{1}{y^{2}}u_{\eta\eta}.
 \end{align*}
 
 Тоді, виконавши підстановку у початкове рівняння, приводимо до канонічної форми:
@@ -199,6 +202,107 @@ u_{yy} &= -\frac{1}{y^{2}}u_{\eta} + \frac{1}{y}(u_{\eta\xi}\xi_{y} + u_{\eta\et
 										& 												&$u_{\xi\xi} - u_{\eta\eta} + u_{\eta} -u_{\xi} = 0$ 		(при $\xi = \ln{\left|x\right|}, \eta = \ln{\left|y\right|}$); \\
 										&	параболічне при $x=0$ або $y=0$: 		&$u_{yy}=0$ або $u_{xx}=0$ відповідно;\\
 										&при $x=y=0$: &$0=0$ --- нічого класифікувати.\\
-	\end{itemize}\\	\end{taular}
+	\end{itemize}\\	
+\end{taular}
+	
+%#2
+{\large\textbf{Приклад 2}}
+
+\begin{equation*}
+	(1+x^{2})u_{xx} + (1+y^{2})u_{yy} + yu_{y} = 0.
+\end{equation*}
+
+Для нього:
+\begin{align*}
+	&a_{11} = 1 + x^{2}, \quad a_{12} = 0, \quad a_{22} = 1 + y^{2}, \\
+	&D = a_{12}^{2} - a_{11}a_{22} = -(1+x^{2})(1+y^{2}) < 0, \quad \text{при $(x;y) \in \mathbb{R}$}.
+\end{align*}
+Рівняння всюди еліптичне. Рівняння характеристик:
+\begin{align*}
+	 &\frac{dy}{dx} = \frac{a_{12} \pm \sqrt{D}}{a_{11}} = \frac{\pm i\sqrt{(1+x^{2})(1+y^{2})}}{1+x^{2}} = \pm i\frac{\sqrt{1+y^{2}}}{\sqrt{1+x^{2}}} \Leftrightarrow \\
+	\Leftrightarrow \;& \frac{dy}{\sqrt{1+y^{2}}} = \pm i\frac{dx}{\sqrt{1+x^{2}}} \Rightarrow \\
+	\Rightarrow \;&\ln{\left|y+\sqrt{1+y^{2}}\right|} = \pm i\ln{\left|x+\sqrt{1+x^{2}}\right|} + C. \\
+\end{align*}
+ 
+Беремо дійсну й уявну частини загальних інтегралів:
+\begin{align*}
+	\left\{ 
+	\begin{aligned}
+		&\xi=\ln{\left|x+\sqrt{1+x^{2}}\right|} \\
+		&\eta=\ln{\left|y+\sqrt{1+y^{2}}\right|}
+	\end{aligned},
+	\right.
+\end{align*}
+тоді маємо:
+\begin{align*}
+	&u_{x} = u_{\xi}\xi{x} + u_{\eta}\eta_{x} = u_{\xi}\frac{1}{\sqrt{1+x^{2}}}, \\
+	&u_{xx} = -x(1+x^{2})^{-\frac{3}{2}}u_{\xi} + \frac{1}{\sqrt{1+x^{2}}}(u_{\xi\xi}\xi_{x} + u_{\xi\eta}\eta_{x}) = -x(1+x^{2})^{-\frac{3}{2}}u_{\xi} + \frac{u_{\xi\xi}}{1+x^{2}},\\
+	&\text{цілком аналогічно:} \\
+	&u_{y} = u_{\eta}\frac{1}{\sqrt{1+y^{2}}}, \\
+	&u_{yy} = -y(1+y^{2})^{-\frac{3}{2}}u_{\eta} + \frac{u_{\eta\eta}}{1+y^{2}}.
+\end{align*}
+Тоді, підставляючи у початкове рівняння, маємо:
+\begin{align*}
+	&(1+x^{2})u_{xx} + (1+y^{2})u_{yy} + yu_{y} = 0 \Leftrightarrow \\
+	\Leftrightarrow \;&-x(1+x^{2})^{-\frac{1}{2}}u_{\xi} + u_{\xi\xi} + u_{\eta\eta} - y(1+y^{2})^{-\frac{1}{2}}u_{\eta}+y(1+y^{2})^{-\frac{1}{2}}u_{\eta} = 0 \Leftrightarrow \\
+	\Leftrightarrow \;& u_{\xi\xi} + u_{\eta\eta} - x(1+x^{2})^{-\frac{1}{2}}u_{\xi} = 0,
+\end{align*}
+оскільки $\xi = \ln{\left|x+\sqrt{1+x^{2}}\right|}= \texttt{arsh}\,{x}$, то $x = \sh{\xi}$, тоді:
+\begin{equation*}
+	\frac{x}{\sqrt{1+x^{2}}} = \frac{\sh{\xi}}{\sqrt{1+{\sh^{2}{\xi}}}} = \frac{\sh{\xi}}{\ch{\xi}} = \tanh{\xi},
+\end{equation*}
+а тоді приводимо рівняння до виду:
+\begin{equation*}
+	u_{\xi\xi} + u_{\eta\eta} - (\tanh{\xi})u_{\xi} = 0.
+\end{equation*}
+
+\textit{Відповідь:} еліптичне, $u_{\xi\xi} + u_{\eta\eta} - (\tanh{\xi})u_{\xi} = 0$, (при $\xi = \ln{\left|x+\sqrt{1+x^{2}}\right|, \; \eta = \ln{\left|y+\sqrt{1+y^{2}}\right|}$).
+
+%#3
+\medskip
+{\large\textbf{Приклад 3}}
+
+\begin{equation*}
+	y^{2}u_{xx} + 2yu_{xy} + u_{yy} = 0.
+\end{equation*}
+
+Для нього:
+\begin{align*}
+	&a_{11} = y^{2}, \quad a_{12} = y, \quad a_{22} = 1, \\
+	&D = a_{12}^{2} - a_{11}a_{22} = y^{2} - y^{2}\cdot 1 = 0, \quad \text{при $(x;y) \in \mathbb{R}$}.
+\end{align*}
+Рівняння всюди параболічне. Його рівняння характеристики:
+\begin{equation*}
+	\frac{dy}{dx} = \frac{a_{12} \pm \sqrt{D}}{a_{11}} = \frac{y}{y^{2}} = \frac{1}{y} \quad \Leftrightarrow\ \quad ydy = dx,
+\end{equation*} 
+а загальний інтеграл рівняння характеристики:
+\begin{equation*}
+	y^{2} - 2x = C.
+\end{equation*}
+Взявши 
+\begin{align*}
+\left\{
+\begin{aligned}
+	&\xi = y^{2}-2x \\
+	&\eta = y
+\end{aligned},
+\right.
+\end{align*}
+маємо:
+\begin{align*}
+	&u_{x} = u_{\xi}\xi_{x} + u_{\eta}\eta_{x} = -2u_{\xi},\\
+	&u_{xx} = -2(u_{\xi\xi}\xi_{x}+u_{\xi\eta}\eta_{x}) = -2(-2u_{\xi\xi}) = 4u_{\xi\xi},\\
+	&u_{xy} = -2(u_{\xi\xi}\xi_{y} + u_{\xi\eta}\eta_{y}) = -2(u_{\xi\xi}\cdot 2y + u_{\xi\eta}),\\
+	&u_{y} = u_{\xi}\xi_{y} + u_{\eta}\eta_{y} = u_{\xi}\cdot 2y + u_{\eta},\\
+	&u_{yy} = 2u_{\xi} + 2y(u_{\xi\xi}\xi_{y}+u_{\xi\eta}\eta_{y}) + u_{\eta\xi}\xi_{y} + u_{\eta\eta}\eta_{y}.
+\end{align*}
+Підставляючи у початкове рівняння, зводимо його до канонічного виду:
+\begin{align*}
+	&y^{2}u_{xx} + 2yu_{xy} + u_{yy} = 0 \Leftrightarrow \\
+	\Leftrightarrow\ &4y^{2}u_{\xi\xi} - 4y(u_{\xi\xi}2y + u_{\xi\eta}) + 2u_{\xi} + 2y(u_{\xi\xi}2y + u_{\xi\eta}\cdot 1) + u_{\eta\xi}\cdot 2y + u_{\eta\eta}\cdot 1 = 0 \Leftrightarrow\ \\
+	\Leftrightarrow\ &4y^{2}u_{\xi\xi} - 8y^{2}u_{\xi\xi}-4yu_{\xi\eta} + 2u_{\xi} + 4y^{2}u_{\xi\xi} + 2yu_{\xi\eta} + 2yu_{\eta\xi} + u_{\eta\eta} = 0 \Leftrightarrow\ u_{\eta\eta} + 2u_{\xi} = 0.
+\end{align*}
+
+\textit{Відповідь:} параболічне всюди, $u_{\eta\eta} + 2u_{\xi} = 0$, (при $\xi = y^{2}-2x, \; \eta = y$).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
