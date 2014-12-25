@@ -315,5 +315,128 @@
 	\item[4)] $u_{xx} + xyu_{yy} = 0$;
 	\item[5)] $u_{xx} - 2cos{x}\cdot u_{xy} - (3 + sin^{2}{x})u_{yy} - yu_{y} = 0$.
 \end{itemize}
+
+%$2
+\chapter{Практика: Метод Фур'є розділення змінних}
+\par\medskip
+{\Large\textbf{1. Приклади}} \medskip
+
+%#1
+{\large\textbf{Приклад 1}}
+
+Дано тонкий однорідний стержень $0 < x < l$, бічна поверхня якого ізольована (теплоізоляція). Знайти закон розподілу температури в стержні, якщо кінці стержня підтримуються при нульовій температурі, а початкова температура $u\right|_{t=0} = u_0(x)=Ax(l-x)$, де $A = const$.
+
+Маємо задачу:
+\begin{align*}
+\left\{
+\begin{aligned}
+	&u_t = a^2u_{xx}, \quad 0<x<l, \\
+	&u(0,t) = u(l,t) = 0, \\
+	&u(x,0) = Ax(l-x).
+\end{aligned}	
+\right.
+\end{align*}
+
+Методом Фур'є: $u(x,t) = X(x)T(t)$, тоді
+\begin{equation*}
+	XT' = a^2TX'' \Leftrightarrow \frac{T'}{a^2T} = \frac{X''}{X} = -\lambda,
+\end{equation*}
+звідки
+\begin{align*}
+\left\{
+\begin{aligned}
+	&X'' + \lambda X = 0, \\
+	&T' +\lambda a^2T = 0, 
+\end{aligned}	
+\right.
+\end{align*}
+Тоді маємо задачу Штурма-Ліувілля:
+\begin{align*}
+\left\{
+\begin{aligned}
+	&X'' + \lambda X = 0, \\
+	&X(0) = X(l) = 0, 
+\end{aligned}	
+\right.
+\end{align*}
+звідки
+\begin{equation*}
+	\lambda_n=\left(\frac{\pi n}{l}\right)^2, \quad X_n(x) = \sin{\frac{\pi nx}{l}}.
+\end{equation*}
+Тоді маємо 
+\begin{equation*}
+	T_n' + \lambda_n a^2T_n = 0 \quad \Leftrightarrow \quad T_n' + \left(\frac{\pi na}{l}\right)^2T_n = 0 \quad \Rightarrow \quad T_n = C_ne^{-\left(\frac{\pi na}{l}\right)^2t}.
+\end{equation*}
+Таким чином, маємо:
+\begin{equation*}
+	u(x,t) = \sum_{n=1}^{\infty}C_ne^{-\left(\frac{\pi na}{l}\right)^2t}\sin{\frac{\pi nx}{l}}.
+\end{equation*}
+Початкова умова:
+\begin{equation*}
+	u(x,0) = \sum_{n=1}^{\infty}C_n\sin{\frac{\pi nx}{l}} = Ax(l - x).
+\end{equation*}
+Розкладаємо $Ax(l-x)$ в ряд Фур'є по системі $\left\{\sin{\frac{\pi nx}{l}}\right\}_{n=1}^{\infty}$. Множимо це на $\sin{\frac{\pi mx}{l}}, \; m \in \mathbb{N}$ і інтегруємо.
+\begin{align*}
+ &\int_{0}^{l}{\sin{\frac{\pi nx}{l}}\cdot\sin{\frac{\pi mx}{l}}dx} = 
+\left\{
+\begin{aligned}
+	&0, \quad m \neq n, \\
+	&\frac{l}{2},\quad m = n, 
+\end{aligned} \qquad \text{тоді}\\
+\right.
+	\frac{l}{2}C_n &= \int_{0}^{l}{Ax(l-x)\sin{\frac{\pi nx}{l}}dx} = -\frac{l}{\pi n}\int_{0}^{l}{Ax(l-x)d\left(\cos{\frac{\pi nx}{l}}\right)} = \\
+	&=\frac{l}{\pi n}\left({\left.-Ax(l-x)\cos{\frac{\pi nx}{l}}\right|_{0}^{l} + \int_{0}^{l}{\cos{\frac{\pi nx}{l}}d{\left(Ax(l-x)\right)}}}\right) = \frac{lA}{\pi n}\int_{0}^{l}{(l-2x)\cos{\frac{\pi nx}{l}}dx} = \\
+	&=\frac{lA}{\pi n}\cdot\frac{l}{\pi n}\int_{0}^{l}{(l-2x)d\left(\sin{\frac{\pi nx}{l}}\right)} = \frac{Al^2}{\pi^2n^2}\left(\left.\left(l-2x\right)\sin{\frac{\pi nx}{l}}\right|_{0}^{l} + 2\int_{0}^{l}{\sin{\frac{\pi nx}{l}}dx}\right) = \\
+	&=\frac{2Al^3}{\pi^3 n^3}\left(\left.-\cos{\frac{\pi nx}{l}}\right|_{0}^{l}\right) = \frac{2Al^3}{\pi^3n^3}\left(1 - (-1)^n\right)=
+	\left\{
+	\begin{aligned}
+		&0, \quad n = 2k, \\
+		&\frac{4Al^3}{\pi^3(2k+1)^3}, \quad n = 2k+1.
+	\end{aligned}
+	\right.
+\end{align*}
+
+Значить,
+\begin{equation*}
+	C_n = 
+	\left\{
+	\begin{aligned}
+		&0, \quad n=2k, \\
+		&\frac{8Al^2}{\pi^3(2k+1)^3}, \quad n = 2k+1.
+	\end{aligned}
+	\right.
+\end{equation*}
+
+Тоді маємо: 
+
+\begin{equation*}
+	u(x,t) = \frac{8Al^2}{\pi^3}\sum_{k=0}^{\infty}{\frac{1}{(2k+1)^3}e^{-\left(\frac{\pi(2k+1)a}{l}\right)^2t}\cdot\sin{\frac{\pi(2k+1)x}{l}}}.
+\end{equation*}
+
+\textit{Відповідь:} $u(x,t) = \frac{8Al^2}{\pi^3}\sum_{k=0}^{\infty}{\frac{1}{(2k+1)^3}e^{-\left(\frac{\pi(2k+1)a}{l}\right)^2t}\sin{\frac{\pi(2k+1)x}{l}}}$.
+
+\textbf{Зауваження:} якщо, наприклад, на кінець $x = l$ подається зовні тепловий потік, то умова пишеться так:
+\begin{equation*}
+	u_x(l,t) \equiv \left.u_x\right|_{x=l} = q(t);
+\end{equation*}
+якщо ж $q(t) \equiv 0$, то кінець $x = l$ теплоізольований.
+Якщо ж сказано, що на кінці $x = l$ йде теплообмін з оточуючим середовищем, то умова пишеться приблизно так:
+\begin{equation*}
+	\left.\left(u_x + hu\right)\right|_{x=l}=hu_0,
+\end{equation*}
+де 	$h$ --- коефіцієнт теплообміну,
+		$u_0$ --- температура оточуючого середовища;
+якщо сказано, що є вільний теплообмін $(u_0 = 0)$, тоді просто маємо $\left.\left(u_x + hu\right)\right|_{x=l} = 0$.
+
+
+\par\bigskip\bigskip
+{\Large\textbf{Література}}
+\begin{thebibliography}{9}
+    \bibitem{lit1} Владмиров~В.С. --- Сборник задач по уравнениям математической физики.  
+    \bibitem{lit2} Очак~Ю.С. --- Методы математической физики.
+    \bibitem{lit3} Будяк, Самарский, Тихонов --- Сборник задач по математической физике.
+\end{thebibliography}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
