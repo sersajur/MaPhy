@@ -437,6 +437,110 @@
     \bibitem{lit3} Будяк, Самарский, Тихонов --- Сборник задач по математической физике.
 \end{thebibliography}
 
+%#2
+{\large\textbf{Приклад 2}}
+
+\begin{align*}
+\left\{
+\begin{aligned}
+	&u_t = u_{xx} - 1, \quad 0<x<1, \\
+	&u(0,t) = u(1,t) = 0, \\
+	&u(x,0) = 2x^2 - 2x.
+\end{aligned}	
+\right.
+\end{align*}
+
+Спочатку розв'язуємо (принаймні, починаємо розв'язувати) задачу з однорідною правою частиною:
+\begin{align*}
+\left\{
+\begin{aligned}
+	&u_t = u_{xx}, \quad 0<x<1, \\
+	&u(0,t) = u(1,t) = 0. 
+\end{aligned}	
+\right.
+\end{align*}
+Розділяючи змінні в однорідній задачі
+\begin{equation*}
+	u(x,t) = X(x)T(t),
+\end{equation*} 
+приходимо до задачі Штурма-Ліувілля:
+\begin{align*}
+\left\{
+\begin{aligned}
+	&X'' + \lambda X = 0, \\
+	&X(0) = X(1) = 0, 
+\end{aligned}	
+\right.
+\end{align*}
+звідки
+\begin{equation*}
+	\lambda_n=\left(\pi n\right)^2, \quad X_n(x) = \sin{(\pi nx)}, \; n \in \mathbb{N}.
+\end{equation*}
+Тоді розв'язок вихідної неоднорідної задачі шукаємо у вигляді ряда 
+\begin{equation*}
+	u(x,t) = \sum_{n=1}^{\infty}{T_n(t)X_n(x)}
+\end{equation*}
+по системі власних функцій $\left\{X_n(x)=\sin(\pi nx)\right\}$ задачі Штурма-Ліувілля для відповідної однорідної задачі. 
+Розкладемо праву частину за цією системою функцій: 
+\begin{align*}
+	-1 = \sum_{n=1}^{\infty}{f_nX_n(x)}, \quad \text{маємо} \quad \int_{0}^{1}{(-1)\sin{(\pi nx)}dx} = f_n\cdot\frac{1}{2}, \quad \text{звідки} \\
+	\frac{(-1)^n-1}{\pi n} = f_n\cdot\frac{1}{2} \quad \Leftrightarrow \quad f_n = \frac{2\cdot ((-1)^n-1)}{\pi n}. 
+\end{align*}
+Тоді, підставивши заготовку в вихідне рівняння, матимемо:
+\begin{align*}
+	&\sum_{n=1}^{\infty}{T'_n(t)X_n(x) = \sum_{n=1}^{\infty}{T_n(t)X''_n(x)} + \sum_{n=1}^{\infty}{f_nX_n(x)}} \quad \Leftrightarrow\ \\
+	\Leftrightarrow \quad &\sum_{n=1}^{\infty}{\left(T'_n(t) + (\pi n)^2T_n(t) - f_n\right)\sin{(\pi nx)}} = 0.
+\end{align*}
+З початкової умови маємо:
+\begin{align*}
+	&u(x,0) = \sum_{n=1}^{\infty}{T_n(0)X_n(x)} = 2x^2 - 2x \quad \Leftrightarrow \\
+	\Leftrightarrow \quad &T_n(0)\cdot\frac{1}{2} = \int_{0}^{1}{\left(2x^2 - 2x\right)\sin(\pi nx)dx} = 4\frac{(-1)^n - 1}{\pi^3 n^3} \quad \Leftrightarrow\ \\
+	&T_n(0) = \frac{8\cdot((-1)^n - 1)}{\pi^3 n^3}.
+\end{align*}
+Тоді маємо $\forall  n \in \mathbb{N}$ рівняння:
+\begin{align*}
+\left\{
+\begin{aligned}
+	&T'_n(t) + (\pi n)^2T_n(t) - f_n = 0, \\
+	&T_n(0) = \frac{8\cdot((-1)^n - 1)}{\pi^3 n^3}.
+\end{aligned}	
+\right.
+\end{align*}
+
+Рівняння розв'язуємо методом варіації постійної.
+\begin{equation*}
+	T'_n(t) = -(\pi n)^2T_n(t) \quad \Leftrightarrow \quad T_n(t) = C_ne^{-(\pi n)^2t}.
+\end{equation*}
+Припускаємо, що $C_n = C_n(t)$, тоді $T_n(t) = C_n(t)e^{-(\pi n)^2t}$, звідки
+\begin{align*}
+	C'_n(t)e^{-(\pi n)^2t} - C_n(t)(\pi n)^2e^{-(\pi n)^2t} + (\pi n)^2C_n(t)e^{-(\pi n)^2t} - f_n = 0 \quad \Leftrightarrow\ \quad C'_n(t)e^{-(\pi n)^2t} = f_n, \text{тоді} \\
+	C'_n(t) = f_n\cdot e^{(\pi n)^2t} \quad \Leftrightarrow \quad C_n(t) = \frac{f_n}{(\pi n)^2}e^{(\pi n)^2t} + C.
+\end{align*}
+Значить, загальний розв'язок неоднорідного звичайного ДР:
+\begin{equation*}
+	T_n(t) = C_n(t)e^{-(\pi n)^2t} = \frac{f_n}{(\pi n)^2} + Ce^{-(\pi n)^2t}.
+\end{equation*}
+З початкової умови:
+\begin{equation*}
+	\frac{8\cdot ((-1)^n - 1)}{(\pi n)^3} = \frac{2\cdot((-1)^n - 1)}{(\pi n)^3} + C\cdot 1 \quad \Leftrightarrow \quad C = \frac{6\cdot((-1)^n-1)}{(\pi n)^3}.
+\end{equation*}
+Значить, 
+\begin{equation*}
+	T_n(t) = \frac{2\cdot((-1)^n-1)}{(\pi n)^3} + \frac{6\cdot((-1)^n-1)}{(\pi n)^3}e^{-(\pi n)^2t}.
+\end{equation*}
+При $n = 2k$ буде $T_n(t) = 0$, тому розглядаємо при $n = 2k+1$.
+Тоді остаточно:
+
+
+\begin{equation*}
+			u(x,t) = \sum_{k=0}^{\infty}{\left(\frac{-4}{(\pi(2k+1))^3} - \frac{12}{(\pi(2k+1))^3}e^{-(\pi(2k+1))^2t}\right)\sin{(\pi(2k+1)x)}} \quad \text{або ж}
+\end{equation*}
+\begin{equation*}
+	u(x,t) = \frac{-4}{\pi^3} \sum_{k=0}^{\infty}{\left(1 + 3e^{-(\pi(2k+1))^2t}\right)}\frac{\sin{(\pi(2k+1)x)}}{(2k + 1)^3}}.\\
+\end{equation*}
+
+
+\textit{Відповідь:} $u(x,t) = \frac{-4}{\pi^3}\sum_{k=0}^{\infty}{\left(1 + 3e^{-(\pi(2k+1))^2t}}\right)\frac{\sin{(\pi(2k+1)x)}}{(2k + 1)^3}}$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
