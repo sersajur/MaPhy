@@ -752,5 +752,108 @@ a $U(x,t)$ --- підібрана так, щоб задовольняти неоднорідні граничні умови, тобто
 					\left\|X_k\right\|^2 = \frac{l}{2}.
 		\end{equation*}
 \end{enumerate}
+
+%#4
+\medskip
+{\large\textbf{Приклад 4}}
+
+\begin{align*}
+	\left\{
+	\begin{aligned}
+		&u_t = u_{xx} + t(x + 1),\\
+		&u_x(0,t) = t^2, \\
+		&u(1,t) = t^2, \\
+		&u(x,0) = 0,
+	\end{aligned}
+	\right.
+\end{align*}		
+
+Функція $U(x,t) = xt^2$ задовольняє граничні умови, тому представимо розв'язок як
+\begin{equation*}
+	u(x,t) = v(x,t) + U(x,t).
+\end{equation*}
+Тоді маємо задачу:
+\begin{align*}
+	\left\{
+	\begin{aligned}
+		&v_t + 2xt = v_{xx} + t(x + 1),\\
+		&v_x(0,t) + t^2 = t^2, \; v(1,t) + t^2 = t^2,\\
+		&v(x,0) + 0 = 0,
+	\end{aligned}
+	\right.
+	\quad \Leftrightarrow \quad
+	\left\{
+	\begin{aligned}
+		&v_t = v_{xx} + t(1 - x),\\
+		&v_x(0,t) = v(1,t) = 0,\\
+		&v(x,0) = 0,
+	\end{aligned}
+	\right.		
+\end{align*}
+
+При розділенні змінних в однорідній задачі отримаємо задачу Штурма-Ліувілля:
+\begin{align*}
+	\left\{
+	\begin{aligned}
+		&X'' + \lambda X = 0,\\
+		&X'(0) = X(1) = 0, 
+	\end{aligned}
+	\right.
+	\quad \Rightarrow \quad
+	\lambda_k = \left(\frac{\pi}{2} + \pi k\right)^2, \;
+	X_k(x) = \cos{\left(\left(\frac{\pi}{2} + \pi k\right)x\right)}, \quad
+	k = \overline{0,1,\ldots}.
+\end{align*}		
+Значить, можна шукати розв'язок у вигляді
+\begin{equation*}
+	v(x,t) = \sum_{k=0}^{\infty}{T_k(t)\cos{\left(\left(\frac{\pi}{2} + \pi k\right)x\right)}}
+\end{equation*}
+Підставляємо його в $v_t = v_{xx} + t(1-x)$. Розкладемо спочатку $t(1-x)$ по $\left\{ X_k(x)\right\}$:
+\begin{align*}
+	&t(1-x) = \sum_{k=0}^{\infty}{f_k(t)\cos{\left(\frac{\pi}{2} + \pi k\right)x}} \quad \Leftrightarrow \\ 
+	\Leftrightarrow\ \quad &t\cdot\int_{0}^{1}{(1-x)\cos{\left(\frac{\pi}{2} + \pi k\right)x}dx} = f_k(t)\int_{0}^{1}{\left(\cos{\left(\frac{\pi}{2} + \pi k\right)x}\right)^2dx} \quad \Leftrightarrow\\
+	\Leftrightarrow \quad &\frac{t}{\left(\frac{\pi}{2} + \pi k\right)^2} = f_k(t)\cdot\frac{1}{2} \quad \Leftrightarrow \quad f_k(t) = \frac{2t}{\left(\frac{\pi}{2} + \pi k\right)^2}.
+\end{align*}
+Тоді маємо задачу:
+\begin{equation*}
+	\sum_{k=0}^{\infty}{\left(T'_k(t) + \left(\frac{\pi}{2} + \pi k\right)^2T_k(t) - \frac{2t}{\left(\frac{\pi}{2} + \pi k\right)^2}\right)\cos{\left(\frac{\pi}{2} + \pi k\right)x}} = 0.
+\end{equation*}
+Початкова умова: 
+\begin{equation*}
+	v(x,0) = \sum_{k=0}^{\infty}{T_k(0)\cos{\left(\frac{\pi}{2} + \pi k\right)x}} = 0 \quad \Leftrightarrow \quad T_k(0) = 0.
+\end{equation*}
+Отже, маємо:
+\begin{align*}
+	\left\{
+	\begin{aligned}
+		&T'_k(t) + \left(\frac{\pi}{2} + \pi k\right)^2T_k(t) = \frac{2t}{\left(\frac{\pi}{2} + \pi k\right)^2},\\
+		&T_k(0) = 0.
+	\end{aligned}
+	\right.
+\end{align*}		
+Загальний розв'язок однорідного рівняння:
+\begin{equation*}
+	\tilde{T}_k(t) = Ce^{-\left(\frac{\pi}{2}+\pi k\right)^2t}.
+\end{equation*}
+Частинний розв'язок неоднорідного рівняння пошукаємо у вигляді $At + B$, тоді буде
+\begin{align*}
+	A + \left(\frac{\pi}{2} + \pi k\right)^2\left(At+B\right) = \frac{2t}{\left(\frac{\pi}{2} + \pi k\right)^2} \quad \Leftrightarrow \quad A + \left(\frac{\pi}{2} + \pi k\right)^2B + \left(\frac{\pi}{2} + \pi k\right)^2tA = \frac{2t}{\left(\frac{\pi}{2} + \pi k\right)^2} \quad \Leftrightarrow \\
+	\Leftrightarrow \quad A = \frac{2}{\left(\frac{\pi}{2} + \pi k\right)^4}, \; B  =\frac{-2}{\left(\frac{\pi}{2} + \pi k\right)^6}.
+\end{align*} 
+
+Значить загальний розв'язок неоднорідного рівняння:
+\begin{equation*}
+	T_k(t) = Ce^{-\left(\frac{\pi}{2} + \pi k\right)^2t} + \frac{2t}{\left(\frac{\pi}{2} + \pi k\right)^4} - \frac{2}{\left(\frac{\pi}{2} + \pi k\right)^6}.
+\end{equation*}
+З умови $T_k(0) = 0$ знаходимо $C = \frac{2}{\left(\frac{\pi}{2} + \pi k\right)^6}$. Тоді:
+\begin{equation*}
+	T_k(t) = \frac{2}{\left(\frac{\pi}{2} + \pi k\right)^6}\left(e^{-\left(\frac{\pi}{2} + \pi k\right)^2t} - 1\right) + \frac{2t}{\left(\frac{\pi}{2} + \pi k\right)^4}.
+\end{equation*}
+
+\textit{Відповідь:} $u(x,t) = xt^2 + \sum_{k=0}^{\infty}{\left(\frac{2}{\left(\frac{\pi}{2} + \pi k\right)^6}\left(e^{-\left(\frac{\pi}{2} + \pi k\right)^2t} - 1\right) + \frac{2t}{\left(\frac{\pi}{2} + \pi k\right)^4}\right)\cos{\left(\frac{\pi}{2} + \pi k\right)x}}$.
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
