@@ -169,20 +169,18 @@
 Поклавши $\xi=xy,\; \eta = \frac{y}{x}$, маємо:
 \begin{align*}
 	&u_{x} =  u_{\xi}\xi_{x}+u_{\eta}\eta_{x} = u_{\xi}y + u_{\eta}(-\frac{y}{x^{2}}),\\ 
-	&\begin{aligned}[t]
-		u_{xx}=&(u_{\xi})_{x}y + u_{\xi}y_{x} + (u_{\eta})_{x}(-\frac{y}{x^{2}}) + u_{\eta}\frac{2y}{x^{3}} =  y(u_{\xi\xi}\xi_{x} + u_{\xi\eta}\eta_{x}) + 0 - \frac{y}{x^{2}}(u_{\eta\xi}\xi_{x} + u_{\eta\eta}\eta_{x}) + u_{\eta}\frac{2y}{x^{3}} = \\
-	= &y(u_{\xi\xi}y-u_{\xi\eta}\frac{y}{x^{2}}) - \frac{y}{x^2}(u_{\eta\xi}y - u_{\eta\eta}\frac{y}{x^{2}}) + u_{\eta}\frac{2y}{x^{3}}=u_{\xi\xi}y^{2} + \frac{y^{2}}{x^{4}}u_{\eta\eta}-\frac{2y^{2}}{x^{2}}u_{\xi\eta} + u_{\eta}\frac{2y}{x^{3}},
-	\end{aligned} \\
-	&u_{y}= u_{\xi}\xi_{y} + u_{\eta}\eta_{y} = u_{\xi}x + u_{\eta}\frac{1}{x},\\
-	&u_{yy}= x(u_{\xi\xi}\xi_{y}+u_{\xi\eta}\eta_{y}) + \frac{1}{x}(u_{\eta\xi}\xi_{y} + u_{\eta\eta}\eta_{y}) = x(u_{\xi\xi}x + u_{\xi\eta}\frac{1}{x}) + \frac{1}{x}(u_{\eta\xi}x + u_{\eta\eta}\frac{1}{x}) = x^{2}u_{\xi\xi}+2u_{\xi\eta} + \frac{1}{x^{2}}u_{\eta\eta}.
+	u_{xx}=&(u_{\xi})_{x}y + u_{\xi}y_{x} + (u_{\eta})_{x}(-\frac{y}{x^{2}}) + u_{\eta}\frac{2y}{x^{3}} =  y(u_{\xi\xi}\xi_{x} + u_{\xi\eta}\eta_{x}) + 0 - \frac{y}{x^{2}}(u_{\eta\xi}\xi_{x} + u_{\eta\eta}\eta_{x}) + u_{\eta}\frac{2y}{x^{3}} = \\
+	= &y(u_{\xi\xi}y-u_{\xi\eta}\frac{y}{x^{2}}) - \frac{y}{x^2}(u_{\eta\xi}y - u_{\eta\eta}\frac{y}{x^{2}}) + u_{\eta}\frac{2y}{x^{3}}=u_{\xi\xi}y^{2} + \frac{y^{2}}{x^{4}}u_{\eta\eta}-\frac{2y^{2}}{x^{2}}u_{\xi\eta} + u_{\eta}\frac{2y}{x^{3}}, \\
+		u_{y}= &u_{\xi}\xi_{y} + u_{\eta}\eta_{y} = u_{\xi}x + u_{\eta}\frac{1}{x},\\
+		u_{yy}= &x(u_{\xi\xi}\xi_{y}+u_{\xi\eta}\eta_{y}) + \frac{1}{x}(u_{\eta\xi}\xi_{y} + u_{\eta\eta}\eta_{y}) = x(u_{\xi\xi}x + u_{\xi\eta}\frac{1}{x}) + \frac{1}{x}(u_{\eta\xi}x + u_{\eta\eta}\frac{1}{x}) =\\
+		= &x^{2}u_{\xi\xi}+2u_{\xi\eta} + \frac{1}{x^{2}}u_{\eta\eta}.
 \end{align*} 
 
 Тоді, виконавши підстановку у початкове рівняння, приводимо до канонічної форми:
 \begin{align*}
-\begin{aligned}[c]
 	&x^{2}u_{xx}-y^{2}u_{yy} = 0 \; \Leftrightarrow \; x^{2}y^{2}u_{\xi\xi} + \frac{y^{2}}{x^{2}}u_{\eta\eta}-2y^{2}u_{\xi\eta}+\frac{2y}{x}u_{\eta}-x^{2}y^{2}u_{\xi\xi}-2y^{2}u_{\xi\eta}-\frac{y^{2}}{x^{2}}u_{\eta\eta}=0 \; \Leftrightarrow \\
-	\Leftrightarrow \; &-4y^{2}u_{\xi\eta}+\frac{2y}{x}u_{\eta}=0 \; \Leftrightarrow \; u_{\xi\eta} - \frac{1}{2xy}u_{\eta} = 0 \; \Leftrightarrow \; u_{\xi\eta} - \frac{1}{2\xi}u_{\eta}=0.
-\end{aligned}
+	\Leftrightarrow  \;
+	&-4y^{2}u_{\xi\eta}+\frac{2y}{x}u_{\eta}=0 \; \Leftrightarrow \; u_{\xi\eta} - \frac{1}{2xy}u_{\eta} = 0 \; \Leftrightarrow \; u_{\xi\eta} - \frac{1}{2\xi}u_{\eta}=0.
 \end{align*}
 
 Можна і іншим способом. Наприклад, поклавши $\alpha = \frac{1}{2}(\xi + \eta) = \frac{1}{2}(xy+\frac{y}{x}),\; \beta = \frac{1}{2}(\xi - \eta) = \frac{1}{2}(xy+\frac{y}{x})$. Але можна загальні інтеграли брати і в їх початковому вигляді $ \ln{\left|y\right|} \pm \ln{\left|x\right|}  = C$. Тоді, поклавши $\xi = \ln{\left|x\right|}, \; \eta = \ln{\left|y\right|}$, маємо:
@@ -377,16 +375,16 @@
 \end{equation*}
 Розкладаємо $Ax(l-x)$ в ряд Фур'є по системі $\left\{\sin{\frac{\pi nx}{l}}\right\}_{n=1}^{\infty}$. Множимо це на $\sin{\frac{\pi mx}{l}}, \; m \in \mathbb{N}$ і інтегруємо.
 \begin{align*}
- &\int_{0}^{l}{\sin{\frac{\pi nx}{l}}\cdot\sin{\frac{\pi mx}{l}}dx} = 
+ &\int\limits_{0}^{l}{\sin{\frac{\pi nx}{l}}\cdot\sin{\frac{\pi mx}{l}}dx} = 
 \left\{
 \begin{aligned}
 	&0, \quad m \neq n, \\
 	&\frac{l}{2},\quad m = n, 
 \end{aligned} \qquad \text{тоді}
 \right.\\
-	\frac{l}{2}C_n &= \int_{0}^{l}{Ax(l-x)\sin{\frac{\pi nx}{l}}dx} = -\frac{l}{\pi n}\int_{0}^{l}{Ax(l-x)d\left(\cos{\frac{\pi nx}{l}}\right)} = \\
-	&=\frac{l}{\pi n}\left({\left.-Ax(l-x)\cos{\frac{\pi nx}{l}}\right|_{0}^{l} + \int_{0}^{l}{\cos{\frac{\pi nx}{l}}d{\left(Ax(l-x)\right)}}}\right) = \frac{lA}{\pi n}\int_{0}^{l}{(l-2x)\cos{\frac{\pi nx}{l}}dx} = \\
-	&=\frac{lA}{\pi n}\cdot\frac{l}{\pi n}\int_{0}^{l}{(l-2x)d\left(\sin{\frac{\pi nx}{l}}\right)} = \frac{Al^2}{\pi^2n^2}\left(\left.\left(l-2x\right)\sin{\frac{\pi nx}{l}}\right|_{0}^{l} + 2\int_{0}^{l}{\sin{\frac{\pi nx}{l}}dx}\right) = \\
+	\frac{l}{2}C_n &= \int\limits_{0}^{l}{Ax(l-x)\sin{\frac{\pi nx}{l}}dx} = -\frac{l}{\pi n}\int\limits_{0}^{l}{Ax(l-x)d\left(\cos{\frac{\pi nx}{l}}\right)} = \\
+	&=\frac{l}{\pi n}\left({\left.-Ax(l-x)\cos{\frac{\pi nx}{l}}\right|_{0}^{l} + \int\limits_{0}^{l}{\cos{\frac{\pi nx}{l}}d{\left(Ax(l-x)\right)}}}\right) = \frac{lA}{\pi n}\int\limits_{0}^{l}{(l-2x)\cos{\frac{\pi nx}{l}}dx} = \\
+	&=\frac{lA}{\pi n}\cdot\frac{l}{\pi n}\int\limits_{0}^{l}{(l-2x)d\left(\sin{\frac{\pi nx}{l}}\right)} = \frac{Al^2}{\pi^2n^2}\left(\left.\left(l-2x\right)\sin{\frac{\pi nx}{l}}\right|_{0}^{l} + 2\int\limits_{0}^{l}{\sin{\frac{\pi nx}{l}}dx}\right) = \\
 	&=\frac{2Al^3}{\pi^3 n^3}\left(\left.-\cos{\frac{\pi nx}{l}}\right|_{0}^{l}\right) = \frac{2Al^3}{\pi^3n^3}\left(1 - (-1)^n\right)=
 	\left\{
 	\begin{aligned}
@@ -483,7 +481,7 @@
 по системі власних функцій $\left\{X_n(x)=\sin(\pi nx)\right\}$ задачі Штурма-Ліувілля для відповідної однорідної задачі. 
 Розкладемо праву частину за цією системою функцій: 
 \begin{align*}
-	-1 = \sum_{n=1}^{\infty}{f_nX_n(x)}, \quad \text{маємо} \quad \int_{0}^{1}{(-1)\sin{(\pi nx)}dx} = f_n\cdot\frac{1}{2}, \quad \text{звідки} \\
+	-1 = \sum_{n=1}^{\infty}{f_nX_n(x)}, \quad \text{маємо} \quad \int\limits_{0}^{1}{(-1)\sin{(\pi nx)}dx} = f_n\cdot\frac{1}{2}, \quad \text{звідки} \\
 	\frac{(-1)^n-1}{\pi n} = f_n\cdot\frac{1}{2} \quad \Leftrightarrow \quad f_n = \frac{2\cdot ((-1)^n-1)}{\pi n}. 
 \end{align*}
 Тоді, підставивши заготовку в вихідне рівняння, матимемо:
@@ -494,7 +492,7 @@
 З початкової умови маємо:
 \begin{align*}
 	&u(x,0) = \sum_{n=1}^{\infty}{T_n(0)X_n(x)} = 2x^2 - 2x \quad \Leftrightarrow \\
-	\Leftrightarrow \quad &T_n(0)\cdot\frac{1}{2} = \int_{0}^{1}{\left(2x^2 - 2x\right)\sin(\pi nx)dx} = 4\frac{(-1)^n - 1}{\pi^3 n^3} \quad \Leftrightarrow\ \\
+	\Leftrightarrow \quad &T_n(0)\cdot\frac{1}{2} = \int\limits_{0}^{1}{\left(2x^2 - 2x\right)\sin(\pi nx)dx} = 4\frac{(-1)^n - 1}{\pi^3 n^3} \quad \Leftrightarrow\ \\
 	&T_n(0) = \frac{8\cdot((-1)^n - 1)}{\pi^3 n^3}.
 \end{align*}
 Тоді маємо $\forall  n \in \mathbb{N}$ рівняння:
@@ -660,9 +658,9 @@ a $U(x,t)$ --- підібрана так, щоб задовольняти неоднорідні граничні умови, тобто
 Розкладемо $F(x,t)$ по $\left\{X_k(x)\right\}$:
 \begin{align*}
 	&F(x,t) = \sum_{k=1}^{\infty}{f_k(t)\sin{\frac{\pi (2k - 1)x}{2l}}}, \quad
-	\text{тоді} \quad \int_{0}^{l}{F(x,t)\sin{\frac{\pi(2k-1)x}{2l}}dx} = f_k(t)\cdot\frac{l}{2},\\
-	\text{бо} \quad &\int_{0}^{l}{\sin^{2}{\frac{\pi(2k-1)x}{2l}}dx} = \frac{l}{2},\quad
-	\text{звідки} \quad f_k(t) = \frac{2}{l}\int_{0}^{l}{F(x,t)\sin{\frac{\pi(2k-1)x}{2l}}dx}.
+	\text{тоді} \quad \int\limits_{0}^{l}{F(x,t)\sin{\frac{\pi(2k-1)x}{2l}}dx} = f_k(t)\cdot\frac{l}{2},\\
+	\text{бо} \quad &\int\limits_{0}^{l}{\sin^{2}{\frac{\pi(2k-1)x}{2l}}dx} = \frac{l}{2},\quad
+	\text{звідки} \quad f_k(t) = \frac{2}{l}\int\limits_{0}^{l}{F(x,t)\sin{\frac{\pi(2k-1)x}{2l}}dx}.
 \end{align*}
 
 Шукаємо розв'язок неоднорідного рівняння у вигляді 
@@ -679,8 +677,8 @@ a $U(x,t)$ --- підібрана так, щоб задовольняти неоднорідні граничні умови, тобто
 \end{equation*}
 Початкові  умови для нього будуть такі:
 \begin{align*}
-	&u(x,0) = \sum_{k=1}^{\infty}{u_k(0)\sin{\frac{\pi(2k-1)x}{2l}}} \quad \Leftrightarrow \quad u_k(0) = \frac{2}{l}\int_{0}^{l}{\phi(x)\sin{\frac{\pi(2k-1)x}{2l}}dx}, \quad \text{аналогічно}\\
-	&u_t(x,0) = \sum_{k=1}^{\infty}{u'_k(0)\sin{\frac{\pi(2k - 1)x}{2l}}} = \psi(x) \quad \Leftrightarrow \quad u'_k(0) = \frac{l}{2}\int_{0}^{l}{\psi(x)\sin{\frac{\pi(2k-1)x}{2l}}dx}.
+	&u(x,0) = \sum_{k=1}^{\infty}{u_k(0)\sin{\frac{\pi(2k-1)x}{2l}}} \quad \Leftrightarrow \quad u_k(0) = \frac{2}{l}\int\limits_{0}^{l}{\phi(x)\sin{\frac{\pi(2k-1)x}{2l}}dx}, \quad \text{аналогічно}\\
+	&u_t(x,0) = \sum_{k=1}^{\infty}{u'_k(0)\sin{\frac{\pi(2k - 1)x}{2l}}} = \psi(x) \quad \Leftrightarrow \quad u'_k(0) = \frac{l}{2}\int\limits_{0}^{l}{\psi(x)\sin{\frac{\pi(2k-1)x}{2l}}dx}.
 \end{align*}
 Після розв'язання ЗДР і знаходження $u_k(t) \; \forall k \in \mathbb{N}$, розв'язок всієї задачі дається через 
 \begin{equation*}
@@ -690,7 +688,7 @@ a $U(x,t)$ --- підібрана так, щоб задовольняти неоднорідні граничні умови, тобто
 Знайдемо тепер розв'язок для конкретних $\phi(x) = \psi(x) = 0, \; F(x,t) = a^2$.
 Тоді %
 \begin{align*}
-	f_k(t) 	&= \frac{2}{l}\int_{0}^{l}{F(x,t)\sin{\frac{\pi(2k-1)x}{2l}}dx} = \frac{2}{l}\int_{0}^{l}{a^2\sin{\frac{\pi(2k-1)x}{2l}}dx} = \\
+	f_k(t) 	&= \frac{2}{l}\int\limits_{0}^{l}{F(x,t)\sin{\frac{\pi(2k-1)x}{2l}}dx} = \frac{2}{l}\int\limits_{0}^{l}{a^2\sin{\frac{\pi(2k-1)x}{2l}}dx} = \\
 					&=-\frac{2a^2}{l}\cdot\frac{2l}{\pi(2k-1)}\left.\cos{\frac{\pi(2k-1)x}{2l}}\right|_{0}^{l} = \frac{4a^2}{\pi(2k-1)}.
 \end{align*}
 Значить, треба знайти розв'язки рівнянь:
@@ -812,7 +810,7 @@ a $U(x,t)$ --- підібрана так, щоб задовольняти неоднорідні граничні умови, тобто
 Підставляємо його в $v_t = v_{xx} + t(1-x)$. Розкладемо спочатку $t(1-x)$ по $\left\{ X_k(x)\right\}$:
 \begin{align*}
 	&t(1-x) = \sum_{k=0}^{\infty}{f_k(t)\cos{\left(\frac{\pi}{2} + \pi k\right)x}} \quad \Leftrightarrow \\ 
-	\Leftrightarrow\ \quad &t\cdot\int_{0}^{1}{(1-x)\cos{\left(\frac{\pi}{2} + \pi k\right)x}dx} = f_k(t)\int_{0}^{1}{\left(\cos{\left(\frac{\pi}{2} + \pi k\right)x}\right)^2dx} \quad \Leftrightarrow\\
+	\Leftrightarrow\ \quad &t\cdot\int\limits_{0}^{1}{(1-x)\cos{\left(\frac{\pi}{2} + \pi k\right)x}dx} = f_k(t)\int\limits_{0}^{1}{\left(\cos{\left(\frac{\pi}{2} + \pi k\right)x}\right)^2dx} \quad \Leftrightarrow\\
 	\Leftrightarrow \quad &\frac{t}{\left(\frac{\pi}{2} + \pi k\right)^2} = f_k(t)\cdot\frac{1}{2} \quad \Leftrightarrow \quad f_k(t) = \frac{2t}{\left(\frac{\pi}{2} + \pi k\right)^2}.
 \end{align*}
 Тоді маємо задачу:
@@ -909,7 +907,7 @@ a $U(x,t)$ --- підібрана так, щоб задовольняти неоднорідні граничні умови, тобто
 З початкових умов:
 \begin{align*}
 	&u(x,0) = \sum_{n=1}^{\infty}{D_n\sin{(\pi nx)}} = x^2 - x \quad \Leftrightarrow \\
-	\Leftrightarrow \quad &D_n\cdot\int_{0}^{1}{(\sin{(\pi nx)})^2dx} = \int_{0}^{1}{(x^2 - x)\sin{(\pi nx)}dx} \quad \Leftrightarrow \\
+	\Leftrightarrow \quad &D_n\cdot\int\limits_{0}^{1}{(\sin{(\pi nx)})^2dx} = \int\limits_{0}^{1}{(x^2 - x)\sin{(\pi nx)}dx} \quad \Leftrightarrow \\
 	\Leftrightarrow \quad &D_n\cdot\frac{1}{2} = \frac{2((-1)^n-1)}{\pi^3n^3} \quad \Leftrightarrow \quad D_n = \frac{4}{\pi^3n^3}\left((-1)^n - 1\right) = 
 	\left\{
 	\begin{aligned}
@@ -954,9 +952,7 @@ a $U(x,t)$ --- підібрана так, щоб задовольняти неоднорідні граничні умови, тобто
 Аналогічно, як і  в найпростішому випадку, можна довести, що $\lambda > 0$. Та і якщо $\lambda < 0$, то $T(t)$ експоненційно зростає, що суперечить теплофізичній суті.  
 	
 \begin{wrapfigure}[11]{l}{190pt}%
-%\begin{center}
-\includegraphics[scale = 0.4]{tg.png}%
-%\end{center}
+	\includegraphics[scale = 0.4]{tg.png}%
 \end{wrapfigure}
 
 Тоді 
@@ -981,16 +977,265 @@ a $U(x,t)$ --- підібрана так, щоб задовольняти неоднорідні граничні умови, тобто
 
 Знайдемо $C_n$:
 \begin{align*}
-	&\int_{0}^{1}{\phi(x)\sin{\left(x\sqrt{\lambda_n}\right)}dx} = C_n\cdot\int_{0}^{1}{\left(\sin{\left(x\sqrt{\lambda_n}\right)}\right)^2dx}, \\
+	&\int\limits_{0}^{1}{\phi(x)\sin{\left(x\sqrt{\lambda_n}\right)}dx} = C_n\cdot\int\limits_{0}^{1}{\left(\sin{\left(x\sqrt{\lambda_n}\right)}\right)^2dx}, \\
 	&\begin{aligned}
-	\int_{0}^{1}{\sin^2{\left(x\sqrt{\lambda_n}\right)}dx} &= \frac{1}{2}\int_{0}^{1}{\left(1-\cos{\left(2x\sqrt{\lambda_n}\right)}\right)} = \frac{1}{2} - \frac{1}{2\cdot 2\cdot\sqrt{\lambda_n}}\left.\sin{\left(2\sqrt{\lambda_n}\cdot x\right)}\right|_{0}^{1} = \\
+	\int\limits_{0}^{1}{\sin^2{\left(x\sqrt{\lambda_n}\right)}dx} &= \frac{1}{2}\int\limits_{0}^{1}{\left(1-\cos{\left(2x\sqrt{\lambda_n}\right)}\right)} = \frac{1}{2} - \frac{1}{2\cdot 2\cdot\sqrt{\lambda_n}}\left.\sin{\left(2\sqrt{\lambda_n}\cdot x\right)}\right|_{0}^{1} = \\
 	&=\frac{1}{2} - \frac{\sin{\left(2\sqrt{\lambda_n}\right)}}{4\sqrt{\lambda_n}} = \frac{1}{2} - \frac{\sin{\sqrt{\lambda_n}}\cos{\sqrt{\lambda_n}}}{2\sqrt{\lambda_n}} \quad \Rightarrow 
 	\end{aligned}\\
-	\Rightarrow \quad &C_n = \frac{2\sqrt{\lambda_n}}{\sqrt{\lambda_n} - \sin{\sqrt{\lambda_n}}\cos{\sqrt{\lambda_n}}}\int_{0}^{1}{\phi(x)\sin{\left(x\sqrt{\lambda_n}\right)}dx}.
+	\Rightarrow \quad &C_n = \frac{2\sqrt{\lambda_n}}{\sqrt{\lambda_n} - \sin{\sqrt{\lambda_n}}\cos{\sqrt{\lambda_n}}}\int\limits_{0}^{1}{\phi(x)\sin{\left(x\sqrt{\lambda_n}\right)}dx}.
 \end{align*} 
 
 \textit{Відповідь:} $u(x,t) = \sum_{n=1}^{\infty}{C_ne^{-a^2\lambda_nt}\sin{\left(x\sqrt{\lambda_n}\right)}}$, де $C_n$ визначено формулою вище, а $\{\lambda_n\}, n \in \mathbb{N}$ --- корені рівняння $\tg{\sqrt{\lambda}} = -\frac{\sqrt{\lambda}}{h}$.
 
+%#8
+\medskip
+{\large\textbf{Приклад 8}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Знайти поперечні коливання прямокутної мембрани $\{0 \leq x \leq p, \; 0 \leq y \leq q\}$ із закріпленими краями, спричинені початковим відхиленням $\phi(x,y)$ та початковою швидкістю $\psi(x,y)$.
+
+\begin{align*}
+	\left\{
+	\begin{aligned}
+		&u_{tt} = a^2(u_{xx} + u_{yy}),\\
+		&u(0,y,t) = u(p,y,t) = u(x,0,t) = u(x,q,t) = 0, \\
+		&u(x,y,0) = \phi(x,y), \\
+		&u_t(x,y,0) = \psi(x,y).
+	\end{aligned}
+	\right.
+\end{align*}		
+
+Розділимо змінні:
+\begin{equation*}
+	u(x,y,t) = T(t)V(x,y).
+\end{equation*}
+Тоді
+\begin{equation*}
+	V(x,y)T''(t) = a^2T(t)\Delta V(x,y) \quad \Leftrightarrow \quad \frac{T''(t)}{a^2T(t)} = \frac{\Delta V(x,y)}{V(x,y)} = -\lambda.
+\end{equation*}
+
+Розглянемо 
+\begin{equation*}
+	\frac{\Delta V}{V} = -\lambda \quad \Rightarrow \quad  V_{xx} + V_{yy} = -\lambda V.
+\end{equation*}
+Покладемо $V(x,y) = X(x)Y(y)$, тоді
+\begin{align*}
+	X''Y + XY'' = -\lambda XY \; \Leftrightarrow \; \frac{X''}{X} + \frac{Y''}{Y} = -\lambda \; \Leftrightarrow \; \frac{X''}{X} = -\frac{Y''}{Y}  -\lambda \equiv -\mu \; \Leftrightarrow \; 
+	\left\{
+	\begin{aligned}
+		&X'' + \mu X = 0, \\
+		&Y'' + \nu Y = 0,
+	\end{aligned}
+	\right.
+\end{align*}
+де $\nu = \lambda - \mu$.
+
+\begin{equation*}
+	X(x) = C_1\sin{\sqrt{\mu}x} + C_2\cos{\sqrt{\mu}x},
+\end{equation*}
+з граничних умов $X(0) = X(p) = 0$ знаходимо:
+\begin{equation*}
+	\mu_n = \left(\frac{\pi n}{p}\right)^2, \quad X_n(x) = \sin{\frac{\pi nx}{p}}.
+\end{equation*}
+Аналогічно
+\begin{equation*}
+Y'' + \nu Y = 0 \quad \Rightarrow \quad \nu_k = \frac{\pi k}{q}, \quad Y_k(y) = \sin{\frac{\pi ky}{q}}.
+\end{equation*}
+Тоді 
+\begin{equation*}
+	\lambda_{nk} = \nu_k + \mu_n = \pi^2\left(\frac{n^2}{p^2} + \frac{k^2}{q^2}\right), \quad V_{nk}(x,y) = X_n(x)Y_k(y) = \sin{\frac{\pi nx}{p}}\cdot\sin{\frac{\pi ky}{q}}.
+\end{equation*}
+
+Дано, $T''_{nk} + a^2\lambda_{nk}T_{nk} = 0$, звідки маємо:
+\begin{equation*}
+	T_{nk}(t) = C_{nk}\sin{\left(a\sqrt{\lambda_{nk}}t\right)} + D_{nk}\cos{\left(a\sqrt{\lambda_{nk}}t\right)}.
+\end{equation*}
+
+Тоді
+\begin{equation*}
+	u(x,y,t) = \sum_{n,k=1}^{\infty}{T_{nk}(t)V_{nk}(x,y)} = \sum_{n=1}^{\infty}{\sum_{k=1}^{\infty}{\left(C_{nk}\sin{\left(a\sqrt{\lambda_{nk}}t\right)} + D_{nk}\cos{\left(a\sqrt{\lambda_{nk}}t\right)}\right)\sin{\frac{\pi nx}{p}}\sin{\frac{\pi ky}{q}}}}.
+\end{equation*} 
+З початкових умов маємо:
+\begin{align*}
+	u(x,y,0) &= \sum_{n,k=1}^{\infty}{D_{nk}\sin{\frac{\pi nx}{p}}\sin{\frac{\pi ky}{q}}} = \phi(x,y) \quad \Rightarrow \\
+	&\Rightarrow \quad	D_{nk} = \frac{4}{pq}\int\limits_{0}^{p}{\int\limits_{0}^{q}{\phi(x,y)\sin{\frac{\pi nx}{p}}\sin{\frac{\pi ky}{q}}dx}dy}, 
+\end{align*}
+аналогічно
+\begin{align*}
+	u_t(x,y,0) &= \sum_{n,k = 1}^{\infty}{C_{nk}a\sqrt{\lambda_{nk}}\sin{\frac{\pi nx}{p}}\sin{\frac{\pi ky}{q}}} = \psi(x,y) \quad \Rightarrow \\
+	&\Rightarrow \quad C_{nk} = \frac{4}{pqa\sqrt{\lambda_{nk}}}\int\limits_{0}^{p}{\int\limits_{0}^{q}{\psi(x,y)\sin{\frac{\pi nx}{p}}\sin{\frac{\pi ky}{q}}dx}dy}.
+\end{align*}
+Підставляючи $C_{nk}$ та $D_{nk}$ у $u(x,y,t)$, отримаємо відповідь.
+
+\textit{Відповідь:} $u(x,y,t) = \sum_{n=1}^{\infty}{\sum_{k=1}^{\infty}{\left(C_{nk}\sin{\left(a\sqrt{\lambda_{nk}t}\right)} + D_{nk}\cos{\left(a\sqrt{\lambda_{nk}t}\right)}\right)\sin{\frac{\pi nx}{p}}\sin{\frac{\pi ky}{q}}}}$, 
+	де $C_{nk}$ та $D_{nk}$ визначені формулами вище.
+
+%$3
+\chapter{Практика: Функції Бесселя}
+\par\medskip
+{\Large\textbf{1. Теоретичні відомості}} \medskip
+
+Рівняння 
+\begin{equation*}
+	x^2y'' + xy' + (x^2-v^2)y = 0
+\end{equation*}
+називають рівнянням Бесселя, а довільний його розв'язок (не нульовий) --- циліндричною функцією.
+
+\begin{wrapfigure}[7]{l}{150pt}%
+	\includegraphics[scale = 0.2]{bessel.png}%
+\end{wrapfigure}
+
+Прикладом циліндричної функції може слугувати наступна функція:
+\begin{equation*}
+	J_v(x) = \sum_{k = 0}^{\infty}{\frac{(-1)^k}{\Gamma(k+v+1)\Gamma(k+1)}\left(\frac{x}{2}\right)^{2k+v}}.
+\end{equation*} 
+Це так звана функція Бесселя першого роду порядку $v$.
+
+Властивості $J_v(x)$:
+\begin{enumerate}
+	\item[1)] якщо $\mu_1$ та $\mu_2$ --- дійсні корені рівняння 
+		\begin{equation*}
+			\alpha J_v(\mu) + \beta\mu J'_v(\mu) = 0, \quad \alpha \geq 0, \; \beta \geq 0, \; \alpha + \beta > 0,
+		\end{equation*}
+		то при $v > -1$ буде
+		\begin{equation*}
+			\int\limits_{0}^{1}{xJ_v(\mu_1x)J_v(\mu_2x)dx} = 0,
+		\end{equation*}
+		якщо $\mu_1^2 \neq \mu_2^2$.
+		
+		Крім того,
+		\begin{equation*}
+			\int\limits_{0}^{1}{xJ_v^2(\mu_ix)dx} = \frac{1}{2}\left(J'_v(\mu_i)\right)^2 + \frac{1}{2}\left(1 - \frac{v^2}{\mu_i^2}\right)J_v^2(\mu_i);
+		\end{equation*}
+	\item[2)] у попередньому співвідношенні $\alpha J_v(\mu) + \beta\mu J'_v(\mu) = 0$ за тих же умов корені всі дійсні й прості (крім, можливо, нуля). Значить, можна перенумерувати додатні корені:
+		\begin{equation*}
+			\mu_1 < \mu_2 < \ldots
+		\end{equation*}
+	\item[3)] за тих же умов система $\left\{J_v(\mu_k^{(v)}x)\right\}, \; k \in \mathbb{N}$, утворює повну ортогональну систему в просторі $L_2(0;1)$ з вагою $\rho(x) = x$.
+	\item[4)] $J_{v+1}(x) + J_{v-1}(x) = \frac{2v}{x}J_v(x); \quad J'_{v}(x) = J_{v-1}(x) - \frac{v}{x}J_v(x) = \frac{v}{x}J_v(x) - J_{v+1}(x)$;
+	\item[5)] якщо $J_v(\mu_i) = 0$ то $\int\limits\limits_{0}^{1}{xJ_v^2(\mu_ix)dx} = \frac{1}{2}J_{v+1}^2(\mu_i)$.
+\end{enumerate}
+
+\par\medskip
+{\Large\textbf{2. Приклади}} \medskip
+
+%#1
+{\large\textbf{Приклад 1}}
+
+Знайти розподіл температури в нескінченному круглому циліндрі $0 \leq r \leq r_0$ при умові, що початкова температура $u(r,0) = u_0(1 - \frac{r^2}{r_0^2})$, а на поверхні циліндра підтримується нульова температура.
+
+Нескінченність циліндра --- не залежить від $z$, однорідність --- не залежить від полярного кута $\phi$. В циліндричних координатах:
+\begin{equation*}
+	\Delta u = u_{rr} + \frac{1}{r}u_r + \frac{1}{r^2}u_{\phi\phi} + u_{zz}.
+\end{equation*}
+Тоді
+\begin{align*}
+	\left\{
+	\begin{aligned}
+		&u_t = a^2\left(u_{rr} + \frac{1}{r}u_r\right), \; 0 < r < r_0, \\
+		&u(r,0) = u_0\left(1 - \frac{r^2}{r_0^2}\right), \; u(r_0, t) = 0.
+	\end{aligned}
+	\right.
+\end{align*}
+
+\begin{align*}
+	&u(r,t) = R(r)T(t) \quad \Rightarrow \quad R(r)T'(t) = a^2\left(R''(r)T(t) + \frac{1}{r}R'(r)T(t)\right), \; \text{звідки} \\
+	&\frac{T'}{Ta^2} = \frac{R''(r)}{R(r)} + \frac{1}{r}\cdot\frac{R'(r)}{R(r)} = -\lambda \quad \Leftrightarrow \quad 
+	\left\{
+	\begin{aligned}
+		&T' + a^2\lambda T = 0, \\
+		&R'' + \frac{1}{r}R' + \lambda R = 0.
+	\end{aligned}
+	\right.
+\end{align*}
+З граничних умов маємо $R(r_0) = 0$.
+
+\begin{equation*}
+	R'' + \frac{1}{r}R' + \lambda R = 0 \quad \Leftrightarrow \quad r^2R'' + rR' + \lambda r^2R = 0.
+\end{equation*}
+Зробимо заміну $\tilde{r} = \sqrt{\lambda}r$. Тоді, позначивши $\tilde{R}{(\tilde{r})} \equiv R(r)$, маємо:
+\begin{equation*}
+	R' = \frac{dR}{dr} = \frac{dR}{d\tilde{r}}\cdot\frac{d\tilde{r}}{dr} = \sqrt{\lambda}\tilde{R}', \quad R'' = \lambda\tilde{R}'',
+\end{equation*}
+і тоді буде
+\begin{equation*}
+	\tilde{r}^2\tilde{R}'' + \tilde{r}\tilde{R}' + \tilde{r}^2\tilde{R} = 0,
+\end{equation*}
+його частинний розв'язок
+\begin{equation*}
+	\tilde{R}(\tilde{r}) = J_0(\tilde{r}) = J_0\left(\sqrt{\lambda}r\right).
+\end{equation*}
+Значить, рівнянню $r^2R'' + rR' + \lambda r^2R = 0$ задовольняє функція:
+\begin{equation*}
+	R(r) = J_0\left(\sqrt{\lambda}r\right).
+\end{equation*}
+Гранична умова
+\begin{equation*}
+	R(r_0) = 0 \quad \Leftrightarrow \quad J_0\left(r_0\sqrt{\lambda}\right) = 0 \quad \Leftrightarrow \quad r_0\sqrt{\lambda} = \mu_n, \; n \in \mathbb{N},
+\end{equation*}
+де $\mu_n$ --- корінь функції Бесселя $J_0(x)$: $J_0(\mu_n) = 0$. 
+Значить, 
+\begin{equation*}
+	\lambda = \lambda_n = \left(\frac{\mu_n}{r_0}\right)^2,
+\end{equation*}
+і відповідні їм власні функції:
+\begin{equation*}
+	R_n(r) = J_0\left(\frac{\mu_n}{r_0}r\right).
+\end{equation*}
+\begin{equation*}
+	T'_n + a^2\lambda_nT_n = 0 \quad \Leftrightarrow \quad T_n(t) = C_ne^{-a^2\frac{\mu_n^2}{r_0^2}t}.
+\end{equation*}
+Значить,
+\begin{align*}
+	u(r,t) = \sum_{n=1}^{\infty}{C_ne^{-a^2\frac{\mu_n^2}{r_0^2}t}\cdot J_0\left(\frac{r\mu_n}{r_0}\right)}, \\
+	u(r,0) = \sum_{n=1}^{\infty}{C_nJ_0\left(\frac{r\mu_n}{r_0}\right)} = u_0\left(1 - \frac{r^2}{r_0^2}\right).
+\end{align*}
+Тоді
+\begin{equation*}
+	C_n\int\limits\limits_{0}^{r_0}{r\cdot J_0^2\left(\mu_n\frac{r}{r_0}\right)dr} = \int\limits\limits_{0}^{r0}{u_0\left(1 - \frac{r^2}{r_0^2}\right)r\cdot J_0\left(\mu_n\cdot\frac{r}{r_0}\right)dr}.
+\end{equation*}
+Тоді
+\begin{equation*}
+	\int\limits\limits_{0}^{r0}{r\cdot J_0^2\left(\mu_n\frac{r}{r_0}\right)dr} = \left|r=r_0x\right| = r_0^2\int\limits\limits_{0}^{1}{xJ_0^2(\mu_nx)dx} = \frac{r_0^2}{2}J_1^2(\mu_n).
+\end{equation*}
+Для обчислення другого інтегралу скористаємося табличною формулою:
+\begin{equation*}
+	\int\limits\limits_{0}^{1}{J_0(\mu_nx)x\left(1-x^2\right)dx} = \frac{2}{\mu_n^2}J_2(\mu_n).
+\end{equation*}
+Тоді
+\begin{align*}
+	\int\limits\limits_{0}^{r_0}{u_0\left(1 - \left(\frac{r}{r_0}\right)^2\right)r\cdot J_0\left(\mu_n\cdot\frac{r}{r_0}\right)dr} &= \left|r=r_0x\right| = u_0\cdot r_0^2\int\limits\limits_{0}^{1}{x(1 - x^2)J_0(\mu_nx)dx} = \\
+	&= u_0r_0^2\frac{2}{\mu_n^2}J_2(\mu_n) = u_0r_0^2\cdot\frac{2}{\mu_n^2}\cdot\frac{2}{\mu_n}\cdot J_1(\mu_n),
+\end{align*}
+звідки
+\begin{equation*}
+	C_n = \frac{8u_0}{\mu_n^3}\cdot\frac{1}{J_1(\mu_n)}.
+\end{equation*}
+
+\textit{Відповідь:} $u(r,t) = 8u_0\sum\limits_{n=1}^{\infty}{\frac{1}{\mu_n^3\cdot J_1(\mu_n)}\cdot e^{-\frac{a^2\mu_n^2}{r_0^2}t}\cdot J_0\left(\frac{r}{r_0}\mu_n\right)}$, де $\{\mu_n\}, \; n \in \mathbb{N}$ --- корені рівняння $J_0(\mu)=0$.
+
+\par\medskip
+{\Large\textbf{3. Теоретичні відомості (продовження)}} \medskip
+
+Часто використовують \emph{циліндричні функції другого роду (функції Неймана)}
+\begin{equation*}
+	N_v(x) = \frac{\cos{(\pi v)}\cdot J_v(x) - J_{-v}(x)}{\sin{(\pi v)}}, \; v \notin \mathbb{Z}; \quad N_n(x) \equiv \lim_{v\to n,\;v \notin \mathbb{Z}}{N_v(x)}, \; n \in \mathbb{Z}.
+\end{equation*}
+Визначник Вронського 
+\begin{equation*}
+	W\left[J_v(x);N_v(x)\right] = \frac{2}{\pi x} > 0 \quad \forall x > 0,
+\end{equation*}
+значить $J_v(x)$ та $N_v(x)$ --- лінійно незалежні. Тоді загальний розв'язок рівняння Бесселя можна представити як
+\begin{equation*}
+	y(x) = C_1J_v(x) + C_2N_v(x),
+\end{equation*}
+де $C_i = const$. 
+$N_0(x) \sim \ln{x}$ та $N_v(x) \sim x^{-v}$ при $x \to 0$, тому в нулі $x = 0$ функція Неймана має особливість.
+
+\emph{Циліндричні функції третього роду (функції Ханкеля)}:
+\begin{align*}
+	H_v^{(1)}(x) = J_v(x) + iN_v(x), \\
+	H_v^{(2)}(x) = J_v(x) - iN_v(x).
+\end{align*}
+Видно, що $J_v$ та $N_v$ є аналогами $\cos{x}$ та $\sin{x}$, а $H_v^{(1)}$ та $H_v^{(2)}$ --- аналогами $e^{ix}$ та $e^{-ix}$.
+
 \end{document}
